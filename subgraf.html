@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 20;
+      width: 100%;
+      /* z-index: 800; */
+    }
+
+    body {
+      margin-top: 70px;
+      /* Adjust this based on the navbar's height */
+    }
+
+    .quiz-container {
+      margin-top: 20px;
+      /* Add some margin below the navbar */
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #c47836;
+      color: #fff;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+
+    }
+
+    .name a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-menu li {
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .navbar-menu a {
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 10px;
+      display: inline-block;
+    }
+
+    .navbar-menu a:hover {
+      background-color: #f39c12;
+      color: #fff;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #b2600f;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f39c12;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-family:Arial, Helvetica, sans-serif;
+      color: #030303;
+    }
+
+    p {
+      text-align: center;
+      font-family:Arial, Helvetica, sans-serif;
+      color: #030303;
+    }
+
+    body {
+      font-family:Arial, Helvetica, sans-serif ;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .container-subgraf {
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #cd9d4c;
+      /* opacity: 0.5; */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .main-container {
+      width: 100%;
+      margin: 50 px auto;
+      padding: 40px;
+      background-color: rgb(180, 130, 74);
+    }
+
+    /* img{
+            width: 200px;
+            height: 180px;
+        } */
+    h2 {
+      text-align: center;
+    }
+
+    /* Gaya umum untuk bagian video */
+    /* .video-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+    /* Gaya untuk heading */
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 15px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="name"><a href="cnth.html">MATHSUB</a></div>
+    <ul class="navbar-menu">
+      <li><a href="subgraf.html">Subgraf</a></li>
+      <li><a href="spanning.html">Spanning Subgraf</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Subgraf Induksi</a>
+        <ul class="dropdown-menu">
+          <li><a href="induksi-verteks.html">Induksi Verteks</a></li>
+          <li><a href="induksi-sisi.html">Induksi Sisi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Kalkulator</a>
+        <ul class="dropdown-menu">
+          <li><a href="induksisi-kalkulator.html">Induksi Sisi</a></li>
+          <li><a href="induksiverteks-kalkulator.html">Induksi Verteks</a></li>
+          <li><a href="kalkulator-spanning.html">Perentang</a></li>
+        </ul>
+      </li>
+      <li><a href="Quiz.html">Quiz</a></li>
+      <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Kalkulator</a>
+            <ul class="dropdown-menu">
+              <li><a href="induksisi-kalkulator.html">Induksi Sisi</a></li>
+              <li><a href="induksiverteks-kalkulator.html">Induksi Verteks</a></li>
+              <li><a href="kalkulator-spanning.html">Perentang</a></li>
+            </ul>
+          </li> -->
+    </ul>
+  </nav>
+  <div class="main-container">
+    <div class="container-subgraf">
+      <div class="subgraf">
+        <h2>SUBGRAF</h2>
+        <h4>1. Pengertian Subgraf</h4>
+        <p>Dalam teori graf, <b>Subgraph</b> adalah graf yang memiliki himpunan titik dan sisi yang merupakan bagian
+          dari himpunan titik dan sisi graf lainnya. Subgraf dapat didefinisikan sebagai graf dengan verteks (titik) dan
+          rusuk (sisi) yang merupakan himpunan bagian tak kosong dari verteks dan rusuk graf lainnya.
+        </p>
+        <p>
+          Misalkan G = (V, E) adalah suatu graf dengan himpunan titik V dan himpunan sisi E.
+          Suatu grafik H = (V1, E1) dianggap sebagai subgraf dari suatu grafik G jika dan hanya jika: <br>
+          a. V1 (H) ⊆ V (G) <br>
+          b. E1 (H) ⊆ E (G)
+          <br>
+          Setiap garis dalam H mempunyai titik ujung yang sama dengan garis tersebut dalam G
+        </p>
+        <h4>2. Contoh Subgraf</h4>
+        <img src="contoh-subgraf.jfif" alt="" style="width: 250px; height: 180px;">
+        <p>Apakah H merupakan subgraf G ?</p>
+        <p><b>Penyelesaian : <br></b></p>
+        <img src="" alt="">
+        <p>
+          V (H) = {V2,V3} dan V (G) = {V1,V2,V3}, sehingga E (H) ⊆ E (G). <br>
+          Garis e4 di H merupakan loop pada V2 dan e4 juga merupakan loop pada V2 di G. Maka H merupakan subgraf G.
+        </p>
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UcJxtzsuU_E" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="margin: 20px 0; display: block; margin-left: auto; margin-right: auto;">
+          </iframe>
+        </p>
+        <h2>Untuk Pemahaman Lebih Lanjut Tonton Video di bawah ini</h2>
+
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lhRzQUlmU3E" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="margin: 20px 0; display: block; margin-left: auto; margin-right: auto;">
+          </iframe>
+        </p>
+
+      </div>
+    </div>
+
+</body>
+
+</html>
